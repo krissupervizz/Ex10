@@ -1,8 +1,10 @@
-// Copyright 2020 A.SHT
+// Copyright 2021 Krissupervizz
 #ifndef INCLUDE_POSTFIX_H_
 #define INCLUDE_POSTFIX_H_
-#include <string>
+#define CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <string.h>
 
-std::string infix2postfix(std::string infix);
+std::string infix2prefix(std::string infix);
 
-#endif  // INCLUDE_POSTFIX_H_
+#endif INCLUDE_POSTFIX_H_

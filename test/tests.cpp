@@ -1,32 +1,25 @@
-// Copyright 2020 GHA Test Team
+// Copyright 2021 Krissupervizz
 #include <gtest/gtest.h>
 #include <string>
 #include "postfix.h"
 
 TEST(PostfixTest, test1) {
-  std::string inf = "2 + 2";
-  std::string postf = infix2postfix(inf);
-  std::string expected = "2 2 +";
-  EXPECT_EQ(expected, postf);
+    std::string inf = "2 + 2";
+    std::string postf = infix2prefix(inf);
+    std::string expected = "22+";
+    EXPECT_EQ(expected, postf);
 }
 
 TEST(PostfixTest, test2) {
-  std::string inf = "2 + 6 * 3 / (4 - 2)";
-  std::string postf = infix2postfix(inf);
-  std::string expected = "2 6 3 * 4 2 - / +";
-  EXPECT_EQ(expected, postf);
+    std::string inf = "2 + 6 * 3 / (4 - 2)";
+    std::string postf = infix2prefix(inf);
+    std::string expected = "263*42-/+";
+    EXPECT_EQ(expected, postf);
 }
 
-TEST(PostfixTest, test3) {
-  std::string inf = "(2 + 8.3) * (6 - 3.2)";
-  std::string postf = infix2postfix(inf);
-  std::string expected = "2 8.3 + 6 3.2 - *";
-  EXPECT_EQ(expected, postf);
-}
-
-TEST(PostfixTest, test4) {
-  std::string inf = "(6 * (4 - 2) + 5) * (2.6 + 3 * 7) - 9";
-  std::string postf = infix2postfix(inf);
-  std::string expected = "6 4 2 - * 5 + 2.6 3 7 * + * 9 -";
-  EXPECT_EQ(expected, postf);
+TEST(PostfixTest, test2) {
+    std::string inf = "(1 + 2) / (3 + 4 * 6.7) - 5.3 * 4.4";
+    std::string postf = infix2prefix(inf);
+    std::string expected = "12+346.7*+/5.34.4*-";
+    EXPECT_EQ(expected, postf);
 }
