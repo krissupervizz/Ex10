@@ -8,7 +8,7 @@ int prior(char s) {
     else if ((s == '+') || (s == '-')) return 2;
     else if (s == '(') return 0;
     else if (s == ')') return 1;
-    else 
+    else
         return 10;
 }
 

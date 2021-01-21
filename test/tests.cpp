@@ -17,7 +17,7 @@ TEST(PostfixTest, test2) {
     EXPECT_EQ(expected, postf);
 }
 
-TEST(PostfixTest, test2) {
+TEST(PostfixTest, test3) {
     std::string inf = "(1 + 2) / (3 + 4 * 6.7) - 5.3 * 4.4";
     std::string postf = infix2prefix(inf);
     std::string expected = "12+346.7*+/5.34.4*-";
