@@ -8,7 +8,8 @@ int prior(char s) {
     else if ((s == '+') || (s == '-')) return 2;
     else if (s == '(') return 0;
     else if (s == ')') return 1;
-    else return 10;
+    else 
+        return 10;
 }
 
 std::string infix2prefix(std::string infix) {
@@ -31,7 +32,7 @@ std::string infix2prefix(std::string infix) {
                 operand.push(i);
             } else {
                 while (prior(operand.get()) >= prior(i)) {
-                    if (operand.isEmpty) break;
+                    if (operand.isEmpty()) break;
                     prefix = prefix + operand.pop();
                 }
                 operand.push(i);
