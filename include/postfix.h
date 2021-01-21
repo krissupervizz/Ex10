@@ -3,8 +3,8 @@
 #define INCLUDE_POSTFIX_H_
 #define CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <string.h>
+#include <string>
 
 std::string infix2prefix(std::string infix);
 
-#endif INCLUDE_POSTFIX_H_
+#endif  // INCLUDE_POSTFIX_H_

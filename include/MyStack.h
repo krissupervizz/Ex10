@@ -7,12 +7,12 @@
 
 template<typename T>
 class MyStack {
-private:
+ private:
     int size;
     int max_size;
     T* stack;
 
-public:
+ public:
     explicit MyStack(int i) {
         this->size = 0;
         this->max_size = i;
@@ -29,8 +29,7 @@ public:
     T get() const {
         if (!isEmpty()) {
             return this->stack[size - 1];
-        }
-        else {
+        } else {
             return -1;
         }
     }
@@ -38,8 +37,7 @@ public:
         if (!isEmpty()) {
             this->size--;
             return this->stack[size];
-        }
-        else {
+        } else {
             return -1;
         }
     }
@@ -48,8 +46,7 @@ public:
             this->stack[size] = element;
             this->size++;
             return element;
-        }
-        else {
+        } else {
             return -1;
         }
     }
